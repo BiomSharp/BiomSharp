@@ -1,0 +1,80 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Title>BiomStudio</Title>
+    <FileVersion>1.0</FileVersion>
+    <AssemblyVersion>1.0</AssemblyVersion>
+    <Authors>BiomSharp</Authors>
+    <Company>Businessware Architects</Company>
+    <Product>BioStudio</Product>
+    <Description>Demonstrates core functionality of the BiomSharp biometric framework</Description>
+    <Copyright>Copyright© 2019 - 2022, Businessware Architects. All rights reserved</Copyright>
+    <RootNamespace>BiomStudio</RootNamespace>
+    <ApplicationIcon>applogo.ico</ApplicationIcon>
+    <Platforms>x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="AssemblyNamedVersionAttribute">
+      <_Parameter1>Demo Version</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="BuildDateAttribute">
+      <_Parameter1>$([System.DateTime]::Now.ToString("yyyyMMddHHmmss"))</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="applogo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="applogo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Source\BiomSharp\BiomSharp.ImageSharp\BiomSharp.ImageSharp.csproj" />
+    <ProjectReference Include="..\..\Source\BiomSharp\BiomSharp.SourceAfis\BiomSharp.SourceAfis.csproj" />
+    <ProjectReference Include="..\..\Source\BiomSharp\BiomSharp.Windows\BiomSharp.Windows.csproj" />
+    <ProjectReference Include="..\..\Source\BiomSharp\BiomSharp\BiomSharp.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="echo Copying NFIQ2 unmanaged DLL's&#xD;&#xA;copy /Y &quot;..\..\Source\BiomSharp\Unmanaged\bin\x64\nfiq2\getopt.dll&quot; &quot;$(TargetDir)&quot;&#xD;&#xA;copy /Y &quot;..\..\Source\BiomSharp\Unmanaged\bin\x64\nfiq2\nfiq2api.dll&quot; &quot;$(TargetDir)&quot;" />
+  </Target>
+
+</Project>

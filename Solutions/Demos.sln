@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demos", "Demos", "{5978CB11-2758-4691-A305-556C3663CA16}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{F43D6614-D66C-4A3C-94E1-A0735C25077B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BiomSharp", "BiomSharp", "{B74B7368-38D0-4A17-8EF6-AB3AA267D3C3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BiomSharp", "..\Source\BiomSharp\BiomSharp\BiomSharp.csproj", "{A8F73383-5788-4E4B-BB68-9ABD30BFA1A0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BiomSharp.Windows", "..\Source\BiomSharp\BiomSharp.Windows\BiomSharp.Windows.csproj", "{E0FBF810-9374-4386-934E-E2F222DB1F80}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BiomSharp.ImageSharp", "..\Source\BiomSharp\BiomSharp.ImageSharp\BiomSharp.ImageSharp.csproj", "{26AB7071-A2E2-4278-B434-7BE7C95FC94D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BiomSharp.SourceAfis", "..\Source\BiomSharp\BiomSharp.SourceAfis\BiomSharp.SourceAfis.csproj", "{87EA769D-4127-4620-BD83-9F58091AE184}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Unmanaged", "..\Source\BiomSharp\Unmanaged\Unmanaged.shproj", "{385DD826-3A4C-4E05-B735-113CED052D6B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BiomStudio", "..\Demos\BiomStudio\BiomStudio.csproj", "{147634D3-27CC-4984-AC88-443D135BF99F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8F73383-5788-4E4B-BB68-9ABD30BFA1A0}.Debug|x64.ActiveCfg = Debug|x64
+		{A8F73383-5788-4E4B-BB68-9ABD30BFA1A0}.Debug|x64.Build.0 = Debug|x64
+		{A8F73383-5788-4E4B-BB68-9ABD30BFA1A0}.Release|x64.ActiveCfg = Release|x64
+		{A8F73383-5788-4E4B-BB68-9ABD30BFA1A0}.Release|x64.Build.0 = Release|x64
+		{E0FBF810-9374-4386-934E-E2F222DB1F80}.Debug|x64.ActiveCfg = Debug|x64
+		{E0FBF810-9374-4386-934E-E2F222DB1F80}.Debug|x64.Build.0 = Debug|x64
+		{E0FBF810-9374-4386-934E-E2F222DB1F80}.Release|x64.ActiveCfg = Release|Any CPU
+		{E0FBF810-9374-4386-934E-E2F222DB1F80}.Release|x64.Build.0 = Release|Any CPU
+		{26AB7071-A2E2-4278-B434-7BE7C95FC94D}.Debug|x64.ActiveCfg = Debug|x64
+		{26AB7071-A2E2-4278-B434-7BE7C95FC94D}.Debug|x64.Build.0 = Debug|x64
+		{26AB7071-A2E2-4278-B434-7BE7C95FC94D}.Release|x64.ActiveCfg = Release|x64
+		{26AB7071-A2E2-4278-B434-7BE7C95FC94D}.Release|x64.Build.0 = Release|x64
+		{87EA769D-4127-4620-BD83-9F58091AE184}.Debug|x64.ActiveCfg = Debug|x64
+		{87EA769D-4127-4620-BD83-9F58091AE184}.Debug|x64.Build.0 = Debug|x64
+		{87EA769D-4127-4620-BD83-9F58091AE184}.Release|x64.ActiveCfg = Release|x64
+		{87EA769D-4127-4620-BD83-9F58091AE184}.Release|x64.Build.0 = Release|x64
+		{147634D3-27CC-4984-AC88-443D135BF99F}.Debug|x64.ActiveCfg = Debug|x64
+		{147634D3-27CC-4984-AC88-443D135BF99F}.Debug|x64.Build.0 = Debug|x64
+		{147634D3-27CC-4984-AC88-443D135BF99F}.Release|x64.ActiveCfg = Release|Any CPU
+		{147634D3-27CC-4984-AC88-443D135BF99F}.Release|x64.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B74B7368-38D0-4A17-8EF6-AB3AA267D3C3} = {F43D6614-D66C-4A3C-94E1-A0735C25077B}
+		{A8F73383-5788-4E4B-BB68-9ABD30BFA1A0} = {B74B7368-38D0-4A17-8EF6-AB3AA267D3C3}
+		{E0FBF810-9374-4386-934E-E2F222DB1F80} = {B74B7368-38D0-4A17-8EF6-AB3AA267D3C3}
+		{26AB7071-A2E2-4278-B434-7BE7C95FC94D} = {B74B7368-38D0-4A17-8EF6-AB3AA267D3C3}
+		{87EA769D-4127-4620-BD83-9F58091AE184} = {B74B7368-38D0-4A17-8EF6-AB3AA267D3C3}
+		{385DD826-3A4C-4E05-B735-113CED052D6B} = {B74B7368-38D0-4A17-8EF6-AB3AA267D3C3}
+		{147634D3-27CC-4984-AC88-443D135BF99F} = {5978CB11-2758-4691-A305-556C3663CA16}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2C3FA83E-7EEA-445A-9C99-FF40579538A5}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\Source\BiomSharp\Unmanaged\Unmanaged.projitems*{385dd826-3a4c-4e05-b735-113ced052d6b}*SharedItemsImports = 13
+	EndGlobalSection
+EndGlobal

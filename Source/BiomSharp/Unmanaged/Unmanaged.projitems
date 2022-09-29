@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>385dd826-3a4c-4e05-b735-113ced052d6b</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Unmanaged</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)bin\x64\nfiq2\getopt.dll" />
+    <None Include="$(MSBuildThisFileDirectory)bin\x64\nfiq2\Nfiq2Api.dll" />
+    <None Include="$(MSBuildThisFileDirectory)source\nfiq2\NFIQ2Algorithm\include\nfiq2_algorithm.hpp" />
+    <None Include="$(MSBuildThisFileDirectory)source\nfiq2\NFIQ2Algorithm\include\prediction\RandomForestML.h" />
+    <None Include="$(MSBuildThisFileDirectory)source\nfiq2\NFIQ2Algorithm\src\nfiq2\nfiq2_algorithm.cpp" />
+    <None Include="$(MSBuildThisFileDirectory)source\nfiq2\NFIQ2Algorithm\src\nfiq2\nfiq2_algorithm_impl.cpp" />
+    <None Include="$(MSBuildThisFileDirectory)source\nfiq2\NFIQ2Algorithm\src\nfiq2\nfiq2_algorithm_impl.hpp" />
+    <None Include="$(MSBuildThisFileDirectory)source\nfiq2\NFIQ2Api\nfiq2api.cpp" />
+    <None Include="$(MSBuildThisFileDirectory)source\nfiq2\NFIQ2Api\nfiq2api.def" />
+  </ItemGroup>
+</Project>

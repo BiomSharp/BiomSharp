@@ -1,0 +1,11 @@
+LIBRARY NFIQ2API
+EXPORTS
+  GetNfiq2Version
+  InitNfiq2
+  ComputeNfiq2Score
+  Nfiq2Initialize
+  Nfiq2GetVersion
+  Nfiq2GetActionableFeedbackIds
+  Nfiq2GetQualityFeatureIds
+  Nfiq2ComputeScore
+  Nfiq2ComputeScoreEx
