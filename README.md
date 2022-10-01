@@ -10,7 +10,7 @@ The framework also provides functionality required for biometric analysis separa
 
 ## Why C#?
 
-Most of our clients require deployments on the Microsoft Windows operating system. Also, as most biometric vendors provide mainly C++ and nowadays, C# SDK's, it has become our path of least-resistance. It is our experience that using a memory-managed framework/language leads to higher quality solutions and faster delivery times. Add to this the fact that most application developers today are less experience in C/C++, makes this type of framework a more attractive alternative.
+Most of our clients require deployments on the Microsoft Windows operating system. Also, as most biometric vendors provide mainly C++ and nowadays, C# SDK's, it has become our path of least-resistance. It is our experience that using a modern memory-managed framework/language leads to higher quality solutions and faster delivery times. Add to this the fact that most application developers today are less experience in C/C++, makes this type of framework a more attractive alternative.
 
 ## Status
 
