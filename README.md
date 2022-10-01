@@ -18,7 +18,7 @@ This Github published framework is an incomplete version of the full framework. 
 
 ## Requirements
 
-The framework currently support .NET 6.0 core. The applications and libraries are provided as a set of Visual Studio solutions (.sln), and C# projects (.csproj) or C++ projects (.vcxproj). The existing builds are for Microsoft Windows and target x64 processor architectures.
+The framework currently supports .NET 6.0 core. The applications and libraries are provided as a set of Visual Studio solutions (.sln), and C# projects (.csproj) or C++ projects (.vcxproj). The existing builds are for Microsoft Windows and target x64 processor architectures.
 
 ## License
 
