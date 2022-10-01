@@ -12,6 +12,14 @@ The framework also provides functionality required for biometric analysis separa
 
 Most of our clients require deployments on the Microsoft Windows operating system. Also, as most biometric vendors provide mainly C++ and nowadays, C# SDK's, it has become our path of least-resistance. It is our experience that using a memory-managed framework/language leads to higher quality solutions and faster delivery times. Add to this the fact that most application developers today are less experience in C/C++, makes this type of framework a more attractive alternative.
 
+## Status
+
+This Github published framework is an incomplete version of the full framework. The idea is to release increased functionality on an ongoing basis.
+
+## Requirements
+
+The framework currently support .NET 6.0 core. The applications and libraries are provided as a set of Visual Studio solutions (.sln), and C# projects (.csproj) or C++ projects (.
+
 ## License
 
 [MIT](https://github.com/BiomSharp/BiomSharp/blob/master/LICENSE.txt)
