@@ -34,7 +34,7 @@ We recommend using Visual Studio 2022 (any edition).
 
 ## Version
 
-Um - not sure we're ready for versioning yet..
+Um - not sure we're ready for versioning yet.
 
 ## Current features
 
