@@ -38,10 +38,10 @@ Um - not sure we're ready for versioning yet..
 
 ## Current features
 
-1. C# implementation of the <a href="https://github.com/BiomSharp/BiomSharp/tree/master/Source/BiomSharp/BiomSharp/Imaging/Wsq/README.md" target="_blank">WSQ codec</a>.
-1. C#-wrapper implementation of the NIST NFIQ 2 (version 2.2) fingerprint quality measure.
-1. Integration to Windows-codecs and ImageSharp-codecs.
-1. Windows-forms demo of some of the functionality.
+1. C# implementation of the <a href="https://github.com/BiomSharp/BiomSharp/tree/master/Source/BiomSharp/BiomSharp/Imaging/Wsq#readme" target="_blank">WSQ codec</a>.
+1. C#-wrapper implementation of the <a href="https://www.nist.gov/services-resources/software/nfiq-2" target="_blank">NIST NFIQ 2</a> (version 2.2) fingerprint quality measure.
+1. Integration to <a href="https://github.com/BiomSharp/BiomSharp/blob/master/Source/BiomSharp/BiomSharp.Windows#readme" target="_blank">Windows-codecs</a> and <a href="https://github.com/BiomSharp/BiomSharp/blob/master/Source/BiomSharp/BiomSharp.ImageSharp#readme" target="_blank">ImageSharp-codecs</a>.
+1. <a href="https://github.com/BiomSharp/BiomSharp/tree/master/Demos/BiomStudio#readme" target="_blank">Windows-forms demo</a> of some of the functionality.
 
 
 
