@@ -12,6 +12,21 @@ The framework also provides functionality required for biometric analysis separa
 
 Most of our clients require deployments on the Microsoft Windows operating system. Also, as most biometric vendors provide mainly C++ and nowadays, C# SDK's, it has become our path of least-resistance. It is our experience that using a memory-managed framework/language leads to higher quality solutions and faster delivery times. Add to this the fact that most application developers today are less experience in C/C++, makes this type of framework a more attractive alternative.
 
+Secondly, .NET (and C#) is gaining wider acceptance as a credible cross-platform development environment on desktop, mobile and back-end systems and applications. The wider appeal is being seen as a greater demand for C#/.NET to be used for developing end-to-end biometric-based solutions.
+
+## Cross-platform portability
+
+We endeavour to provide the code as 'platform-neutral' as possible - most of the projects are portable to any of the existing .NET 6.0 targets. Also, they do not reference Windows-specific packages such as 'System.Drawing.Common' or the Windows application frameworks, Windows-Forms, WPF/UWP, etc. Where they are explicitly referenced they are so documented.
+
+## Status
+
+This Github published framework is currently a (very) incomplete version of the full framework. The idea is to release increased functionality on an ongoing basis.
+
+## Requirements
+
+The framework currently supports .NET 6.0 core. The applications and libraries are provided as a set of Visual Studio solutions (.sln), and C# projects (.csproj) or C++ projects (.vcxproj). The existing builds are for Microsoft Windows and target x64 processor architectures.
+
+
 ## License
 
 [MIT](https://github.com/BiomSharp/BiomSharp/blob/master/LICENSE.txt)
