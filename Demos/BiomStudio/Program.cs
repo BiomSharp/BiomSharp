@@ -18,7 +18,7 @@ namespace BiomStudio
         {
             if (!Nfiq2.Initialize(Resources.ModelInfo, Resources.ModelData))
             {
-                _ = MessageBox.Show("NFIQ2 not initialized!");
+                MessageBox.Show("NFIQ2 not initialized!");
             }
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.

@@ -75,8 +75,6 @@ namespace BiomStudio.Forms
             this.SettingsTabControl = new System.Windows.Forms.TabControl();
             this.ReadImageTabPage = new System.Windows.Forms.TabPage();
             this.ReadImagePropertyGrid = new System.Windows.Forms.PropertyGrid();
-            this.WriteImageTabPage = new System.Windows.Forms.TabPage();
-            this.WriteImagePropertyGrid = new System.Windows.Forms.PropertyGrid();
             this.ImagePanel = new BiomStudio.Controls.ScrollablePicturePanel();
             this.FileExit = new BiomStudio.Controls.FormCommand();
             this.ImageFileOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
@@ -95,7 +93,6 @@ namespace BiomStudio.Forms
             this.MainSplitContainer.SuspendLayout();
             this.SettingsTabControl.SuspendLayout();
             this.ReadImageTabPage.SuspendLayout();
-            this.WriteImageTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FileExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImageFileOpen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImageSizeModeFit)).BeginInit();
@@ -521,7 +518,6 @@ namespace BiomStudio.Forms
             // SettingsTabControl
             // 
             this.SettingsTabControl.Controls.Add(this.ReadImageTabPage);
-            this.SettingsTabControl.Controls.Add(this.WriteImageTabPage);
             this.SettingsTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SettingsTabControl.Location = new System.Drawing.Point(3, 3);
             this.SettingsTabControl.Name = "SettingsTabControl";
@@ -556,32 +552,6 @@ namespace BiomStudio.Forms
             this.ReadImagePropertyGrid.ViewBackColor = System.Drawing.Color.White;
             this.ReadImagePropertyGrid.ViewBorderColor = System.Drawing.Color.White;
             // 
-            // WriteImageTabPage
-            // 
-            this.WriteImageTabPage.Controls.Add(this.WriteImagePropertyGrid);
-            this.WriteImageTabPage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.WriteImageTabPage.Location = new System.Drawing.Point(4, 24);
-            this.WriteImageTabPage.Name = "WriteImageTabPage";
-            this.WriteImageTabPage.Size = new System.Drawing.Size(379, 450);
-            this.WriteImageTabPage.TabIndex = 1;
-            this.WriteImageTabPage.Text = "Write Image";
-            this.WriteImageTabPage.UseVisualStyleBackColor = true;
-            // 
-            // WriteImagePropertyGrid
-            // 
-            this.WriteImagePropertyGrid.BackColor = System.Drawing.Color.White;
-            this.WriteImagePropertyGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.WriteImagePropertyGrid.HelpBackColor = System.Drawing.Color.White;
-            this.WriteImagePropertyGrid.HelpBorderColor = System.Drawing.Color.WhiteSmoke;
-            this.WriteImagePropertyGrid.Location = new System.Drawing.Point(0, 0);
-            this.WriteImagePropertyGrid.Name = "WriteImagePropertyGrid";
-            this.WriteImagePropertyGrid.PropertySort = System.Windows.Forms.PropertySort.NoSort;
-            this.WriteImagePropertyGrid.Size = new System.Drawing.Size(379, 450);
-            this.WriteImagePropertyGrid.TabIndex = 2;
-            this.WriteImagePropertyGrid.ToolbarVisible = false;
-            this.WriteImagePropertyGrid.ViewBackColor = System.Drawing.Color.White;
-            this.WriteImagePropertyGrid.ViewBorderColor = System.Drawing.Color.White;
-            // 
             // ImagePanel
             // 
             this.ImagePanel.AutoScroll = true;
@@ -592,7 +562,7 @@ namespace BiomStudio.Forms
             this.ImagePanel.Margin = new System.Windows.Forms.Padding(0);
             this.ImagePanel.Name = "ImagePanel";
             this.ImagePanel.Size = new System.Drawing.Size(481, 478);
-            this.ImagePanel.SizeMode = ScrollablePicturePanel.PicturePanelSizeMode.Actual;
+            this.ImagePanel.SizeMode = BiomStudio.Controls.ScrollablePicturePanel.PicturePanelSizeMode.Actual;
             this.ImagePanel.TabIndex = 0;
             this.ImagePanel.ImageChanged += new System.EventHandler(this.ImagePanel_ImageChanged);
             // 
@@ -691,7 +661,6 @@ namespace BiomStudio.Forms
             this.MainSplitContainer.ResumeLayout(false);
             this.SettingsTabControl.ResumeLayout(false);
             this.ReadImageTabPage.ResumeLayout(false);
-            this.WriteImageTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.FileExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImageFileOpen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImageSizeModeFit)).EndInit();
@@ -742,8 +711,6 @@ namespace BiomStudio.Forms
         private TabControl SettingsTabControl;
         private TabPage ReadImageTabPage;
         private PropertyGrid ReadImagePropertyGrid;
-        private TabPage WriteImageTabPage;
-        private PropertyGrid WriteImagePropertyGrid;
         private ToolStripSeparator MainButtonSeparator1;
         private ToolStripButton ViewFitButton;
         private ToolStripButton ViewActualButton;
