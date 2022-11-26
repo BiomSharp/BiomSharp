@@ -27,8 +27,7 @@ namespace BiomStudio.Forms
             InitializeComponent();
 
             Text =
-                $"{ApplicationData.Title} - {ApplicationData.NamedVersion}" +
-                $" - {ApplicationData.BuildDate} (UTC+2)";
+                $"{ApplicationData.Title} - {ApplicationData.NamedVersion}";
             CopyrightLabel.Text = ApplicationData.Copyright;
 
             FxSelectorComboBox.SelectedIndex =
