@@ -13,8 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BiomSharp.Windows", "..\Sou
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BiomSharp.ImageSharp", "..\Source\BiomSharp\BiomSharp.ImageSharp\BiomSharp.ImageSharp.csproj", "{7BCB6E22-9FD5-4CE6-9974-12CC3E1867DC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BiomSharp.SourceAfis", "..\Source\BiomSharp\BiomSharp.SourceAfis\BiomSharp.SourceAfis.csproj", "{6C0637D2-C707-4423-AB7B-9AD03C8F891E}"
-EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Unmanaged", "..\Source\BiomSharp\Unmanaged\Unmanaged.shproj", "{385DD826-3A4C-4E05-B735-113CED052D6B}"
 EndProject
 Global
@@ -35,10 +33,6 @@ Global
 		{7BCB6E22-9FD5-4CE6-9974-12CC3E1867DC}.Debug|x64.Build.0 = Debug|x64
 		{7BCB6E22-9FD5-4CE6-9974-12CC3E1867DC}.Release|x64.ActiveCfg = Release|x64
 		{7BCB6E22-9FD5-4CE6-9974-12CC3E1867DC}.Release|x64.Build.0 = Release|x64
-		{6C0637D2-C707-4423-AB7B-9AD03C8F891E}.Debug|x64.ActiveCfg = Debug|x64
-		{6C0637D2-C707-4423-AB7B-9AD03C8F891E}.Debug|x64.Build.0 = Debug|x64
-		{6C0637D2-C707-4423-AB7B-9AD03C8F891E}.Release|x64.ActiveCfg = Release|x64
-		{6C0637D2-C707-4423-AB7B-9AD03C8F891E}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,7 +42,6 @@ Global
 		{96B5B5FA-546B-4F48-9705-793C8BDDCD37} = {839130FD-E6C8-4FC3-A3E5-EBC0FC6135D8}
 		{BE9DE80A-9126-4D62-9B55-8381B4D64CA3} = {839130FD-E6C8-4FC3-A3E5-EBC0FC6135D8}
 		{7BCB6E22-9FD5-4CE6-9974-12CC3E1867DC} = {839130FD-E6C8-4FC3-A3E5-EBC0FC6135D8}
-		{6C0637D2-C707-4423-AB7B-9AD03C8F891E} = {839130FD-E6C8-4FC3-A3E5-EBC0FC6135D8}
 		{385DD826-3A4C-4E05-B735-113CED052D6B} = {839130FD-E6C8-4FC3-A3E5-EBC0FC6135D8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
