@@ -19,6 +19,12 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Unmanaged", "..\Source\Biom
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BiomStudio", "..\Demos\BiomStudio\BiomStudio.csproj", "{147634D3-27CC-4984-AC88-443D135BF99F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample Data", "Sample Data", "{1D621EEC-37A9-4CEF-B087-879BD9E115FE}"
+	ProjectSection(SolutionItems) = preProject
+		..\Demos\Sample Data\BiomStudio_screenshot_01.png = ..\Demos\Sample Data\BiomStudio_screenshot_01.png
+		..\Demos\Sample Data\fingerprint_01.wsq = ..\Demos\Sample Data\fingerprint_01.wsq
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -52,6 +58,7 @@ Global
 		{26AB7071-A2E2-4278-B434-7BE7C95FC94D} = {B74B7368-38D0-4A17-8EF6-AB3AA267D3C3}
 		{385DD826-3A4C-4E05-B735-113CED052D6B} = {B74B7368-38D0-4A17-8EF6-AB3AA267D3C3}
 		{147634D3-27CC-4984-AC88-443D135BF99F} = {5978CB11-2758-4691-A305-556C3663CA16}
+		{1D621EEC-37A9-4CEF-B087-879BD9E115FE} = {5978CB11-2758-4691-A305-556C3663CA16}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2C3FA83E-7EEA-445A-9C99-FF40579538A5}
