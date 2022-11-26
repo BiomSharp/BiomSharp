@@ -64,8 +64,7 @@ namespace BiomStudio.Forms
 
         private void RenderImageToDisplay(Bitmap bitmap)
             =>
-            _ = new HandprintRenderer(
-                ImagePanel, bitmap, null, ImageOpacityTrackBar.Value)
+            _ = new HandprintRenderer(ImagePanel, bitmap, ImageOpacityTrackBar.Value)
             .RenderImageToDisplay();
 
         private void LoadImage(string filePath)
