@@ -3,7 +3,11 @@
 
 ## BiomStudio
 
-This is a Windows-forms application that demonstrates some of the <a href="https://github.com/BiomSharp/BiomSharp/README.md" target="_blank">BiomSharp</a> framework functionality
+This is a Windows-forms application that demonstrates some of the <a href="https://github.com/BiomSharp/BiomSharp/README.md" target="_blank">BiomSharp</a> framework functionality.
+
+## Read-Image view
+
+![Image](https://github.com/biomsharp/biomsharp/tree/master/demos/sample data/biomstudio_screenshot_01.png)
 
 ## What functionality does it provide?
 

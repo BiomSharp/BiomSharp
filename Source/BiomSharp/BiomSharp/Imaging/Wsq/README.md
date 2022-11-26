@@ -16,7 +16,7 @@ Organization: <a href="https://bzw.co.za" target="_blank">Businessware Architect
 ## Provisions of this implementation
 
 **Please note:**
-1. The provided C# implementation is subject to the <a href="https://github.com/BiomSharp/icense.txt" target="_blank">MIT</a> license.
+1. The provided C# implementation is subject to the <a href="https://github.com/BiomSharp/BiomSharp/blob/master/LICENSE.txt" target="_blank">MIT</a> license.
 1. The vendor number is set to '0', which is not allocated to any organization. Please **DO NOT** change this value if the source code is incorporated in your own software.
 
 ## Documentation
