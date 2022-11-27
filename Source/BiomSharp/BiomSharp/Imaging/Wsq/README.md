@@ -22,8 +22,10 @@ Organization: <a href="https://bzw.co.za" target="_blank">Businessware Architect
 ## Features
 1. Based on the <a href="https://www.nist.gov/services-resources/software/nist-biometric-image-software-nbis" target="_blank">NIST NBIS</a> WSQ codec implementation, it allows reading and writing of the NIST-standard image information headers, and comment blocks in the encoded WSQ image.
 1. Uses a proper object-oriented approach, allows for the easy customization of the format by the addition of user-defined tags/blocks.
-1. As per the NIST NBIS codec, allows for the packing of the Huffman Tables (DHT) into a single or multiple discrete blocks.
-1. Provides a setting for using different compression bit-rates.
+1. Providesthe following settings as codec paramaeters:
+1.1. Placing the Huffman Tables (DHT) into a single or multiple discrete blocks.
+1.1. Specifying the WSQ filter taps as the recommended 7x9, or 8x8 kernels.
+1.1. Adjustment of the WSQ compression bit-rates.
 
 ## Documentation
 
