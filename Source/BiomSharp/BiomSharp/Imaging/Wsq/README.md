@@ -19,6 +19,11 @@ Organization: <a href="https://bzw.co.za" target="_blank">Businessware Architect
 1. The provided C# implementation is subject to the <a href="https://github.com/BiomSharp/BiomSharp/blob/master/LICENSE.txt" target="_blank">MIT</a> license.
 1. The vendor number is set to '0', which is not allocated to any organization. Please **DO NOT** change this value if the source code is incorporated in your own software.
 
+## Features
+1. Based on the <a href="https://www.nist.gov/services-resources/software/nist-biometric-image-software-nbis" target="_blank">NIST NBIS</a> WSQ codec implementation, it allows reading and writing of the NIST-standard image information headers, and comment blocks in the encoded WSQ image.
+1. Uses a proper object-oriented approach, allowing for easy customization of the format by the addition of user-defined tabs.
+1. As per the NIST NBIS codec, allows for the packing of the Huffman Tables (DHT) into a single or multiple discrete blocks.
+
 ## Documentation
 
 To follow.
