@@ -24,8 +24,9 @@ Organization: <a href="https://bzw.co.za" target="_blank">Businessware Architect
 2. Uses a proper object-oriented approach, allows for the easy customization of the format by the addition of user-defined tags/blocks.
 3. Provides the following settings as codec parameters:
     * Placing the Huffman Tables (DHT) into a single or multiple discrete blocks.
-    * Specifying the WSQ filter taps as either the standard 7x9, or 8x8 kernel.
+    * Specifying the WSQ filter taps as the recommended 7x9, or 8x8 kernels.
     * Adjustment of the WSQ compression bit-rates.
+
 
 ## Documentation
 
