@@ -1,4 +1,4 @@
-![Logo](https://github.com/BiomSharp/BiomSharp/blob/master/.branding/logo/github_logo.png)
+![Logo](.branding/logo/github_logo.png)
 ######
 BiomSharp, or 'Biom#', is a set of C# libraries and demo applications that provide easier and more consistent management of person biometric data, as well as an abstraction framework for working with various biometric sensors. Some of the biometric functions are provided as C# class libraries that interoperate with C/C++ native libraries.
 
@@ -30,18 +30,14 @@ We recommend using Visual Studio 2022 (any edition).
 
 ## License
 
-[MIT](https://github.com/BiomSharp/BiomSharp/blob/master/LICENSE.txt)
-
-## Version
-
-Um - not sure we're ready for versioning yet.
+[MIT](LICENSE.txt)
 
 ## Current features
 
-1. C# implementation of the <a href="https://github.com/BiomSharp/BiomSharp/tree/master/Source/BiomSharp/BiomSharp/Imaging/Wsq#readme" target="_blank">WSQ codec</a>. This codec is NIST/FBI certified.
-1. C#-wrapper implementation of the <a href="https://www.nist.gov/services-resources/software/nfiq-2" target="_blank">NIST NFIQ 2</a> (version 2.2) fingerprint quality measure.
-1. Integration to <a href="https://github.com/BiomSharp/BiomSharp/blob/master/Source/BiomSharp/BiomSharp.Windows#readme" target="_blank">Windows-codecs</a> and <a href="https://github.com/BiomSharp/BiomSharp/blob/master/Source/BiomSharp/BiomSharp.ImageSharp#readme" target="_blank">ImageSharp-codecs</a>.
-1. <a href="https://github.com/BiomSharp/BiomSharp/tree/master/Demos/BiomStudio#readme" target="_blank">Windows-forms demo</a> of some of the functionality.
+1. C# implementation of the <a href="Source/BiomSharp/BiomSharp/Imaging/Wsq#readme" target="_blank">WSQ codec</a>. This codec is NIST/FBI certified.
+2. C#-wrapper implementation of the <a href="https://www.nist.gov/services-resources/software/nfiq-2" target="_blank">NIST NFIQ 2</a> (version 2.2) fingerprint quality measure.
+3. Integration to <a href="Source/BiomSharp/BiomSharp.Windows#readme" target="_blank">Windows-codecs</a> and <a href="Source/BiomSharp/BiomSharp.ImageSharp#readme" target="_blank">ImageSharp-codecs</a>.
+4. <a href="Demos/BiomStudio#readme" target="_blank">Windows-forms demo</a> of some of the functionality.
 
 
 
