@@ -1,6 +1,6 @@
 // BiomSharp: Copyright (c) Businessware Architects
 // Licensed under the MIT License
-// See: https://biomsharp.github.io/license.txt
+// See: https://biomsharp.github.io/BiomSharp/LICENSE.txt
 
 using System.Reflection;
 using BiomSharp.Imaging.Wsq.IO;
@@ -77,10 +77,7 @@ namespace BiomSharp.Imaging.Wsq
         public static BaseSegment? CreateRead(EndianBinaryReader reader, Marker marker)
         {
             BaseSegment? segment = CreateInstance(marker);
-            if (segment != null)
-            {
-                segment.Read(reader, marker);
-            }
+            segment?.Read(reader, marker);
             return segment;
         }
 

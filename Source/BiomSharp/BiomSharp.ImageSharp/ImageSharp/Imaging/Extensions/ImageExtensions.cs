@@ -1,6 +1,6 @@
 // BiomSharp: Copyright (c) Businessware Architects
 // Licensed under the MIT License
-// See: https://biomsharp.github.io/license.txt
+// See: https://biomsharp.github.io/BiomSharp/LICENSE.txt
 
 using System.Runtime.CompilerServices;
 using BiomSharp.Imaging;

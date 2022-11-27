@@ -1,6 +1,6 @@
 // BiomSharp: Copyright (c) Businessware Architects
 // Licensed under the MIT License
-// See: https://biomsharp.github.io/license.txt
+// See: https://biomsharp.github.io/BiomSharp/LICENSE.txt
 
 using BiomSharp.Plugins;
 
@@ -23,10 +23,7 @@ namespace BiomSharp.Factories
         {
             IEnumerable<Type> plugins = PluginRegister.GetPlugins(
                 pluginFolderPath, includeSubFolders, setEnvironment, isPlugin);
-            if (plugins != null)
-            {
-                plugins.ToList().ForEach(t => Add(t));
-            }
+            plugins?.ToList().ForEach(t => Add(t));
         }
 
         private void Add(IEnumerable<Type> implTypes)

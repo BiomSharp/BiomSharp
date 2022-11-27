@@ -165,7 +165,7 @@ dotnet_style_coalesce_expression = true:warning
 dotnet_style_null_propagation = true:warning
 dotnet_style_prefer_is_null_check_over_reference_equality_method = true:warning
 # File header preferences
-file_header_template = BiomSharp: Copyright (c) Businessware Architects\nLicensed under the MIT License\nSee: https://biomsharp.github.io/license.txt
+file_header_template = BiomSharp: Copyright (c) Businessware Architects\nLicensed under the MIT License\nSee: https://biomsharp.github.io/BiomSharp/LICENSE.txt
 # SA1636: File header copyright text should match
 # Justification: .editorconfig supports file headers. If this is changed to a value other than "none", a stylecop.json file will need to added to the project.
 # dotnet_diagnostic.SA1636.severity = none
