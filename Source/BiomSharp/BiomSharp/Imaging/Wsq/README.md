@@ -9,7 +9,7 @@ This image codec is a pure-C# implementation of the <a href="https://www.nist.go
 
 This C# implementation has passed the NIST <a href="https://www.nist.gov/programs-projects/wsq-certification-procedure" target="_blank">WSQ Certification Process</a>.
 
-We own the following implementations:
+We own the following implementations which are the respective 32/64 bit builds of the included source-code:
 
 Organization: <a href="https://bzw.co.za" target="_blank">Businessware Architects</a> algorithm 11340/11341 as documented here: <a href="https://fbibiospecs.fbi.gov/certifications-1/wsq" target="_blank">WSQ Fingerprint Image Compression Encoder/Decoder Certification</a>
 
