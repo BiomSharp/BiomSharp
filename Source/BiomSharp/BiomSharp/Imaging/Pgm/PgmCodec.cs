@@ -279,7 +279,7 @@ namespace BiomSharp.Imaging.Pgm
         }
 
         public void Decode(byte[] encoded) =>
-            Read(new MemoryStream(encoded), out PgmParameters _);
+            Read(new MemoryStream(encoded), out PgmParameters? _);
 
         public void Decode<TParms>(byte[] encoded, out TParms? readParms)
             where TParms : class, new()
@@ -287,7 +287,7 @@ namespace BiomSharp.Imaging.Pgm
             Read(new MemoryStream(encoded), out readParms);
 
         public void Read(Stream stream) =>
-            Read(stream, out PgmParameters _);
+            Read(stream, out PgmParameters? _);
 
         public void Read<TParms>(Stream stream, out TParms? readParms)
             where TParms : class, new()

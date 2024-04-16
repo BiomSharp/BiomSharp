@@ -18,7 +18,7 @@ namespace BiomSharp.ImageSharp.Imaging
     {
         private readonly IImageFormat? format;
         private readonly IImageEncoder? encoder;
-        private readonly IImageDecoder? decoder;
+        //private readonly IImageDecoder? decoder;
 
         private Image? image = null;
 
@@ -31,8 +31,9 @@ namespace BiomSharp.ImageSharp.Imaging
                     .ImageFormats.FirstOrDefault(fmt => fmt.Name == format);
                 if (this.format != null)
                 {
-                    encoder = Configuration.Default.ImageFormatsManager.FindEncoder(this.format);
-                    decoder = Configuration.Default.ImageFormatsManager.FindDecoder(this.format);
+                    encoder = Configuration.Default.ImageFormatsManager.GetEncoder(this.format);
+                    /*decoder*/
+                    _ = Configuration.Default.ImageFormatsManager.GetDecoder(this.format);
                 }
             }
         }
@@ -44,7 +45,7 @@ namespace BiomSharp.ImageSharp.Imaging
         public override string[]? FileExtensions
             => format?.FileExtensions.Select(e => e.StartsWith('.') ? e : $".{e}").ToArray();
 
-        public override void Decode(byte[] encoded) => image = Image.Load(encoded, decoder);
+        public override void Decode(byte[] encoded) => image = Image.Load(encoded);
 
         public override void Decode<TParms>(byte[] encoded, out TParms? readParms) where TParms : class
         {
@@ -54,6 +55,10 @@ namespace BiomSharp.ImageSharp.Imaging
 
         public override byte[]? Encode()
         {
+            if (encoder == null)
+            {
+                throw new InvalidOperationException("Encoder is null");
+            }
             using var stream = new MemoryStream();
             image?.Save(stream, encoder);
             return stream.ToArray();
@@ -83,7 +88,7 @@ namespace BiomSharp.ImageSharp.Imaging
 
         public override void Read(Stream stream)
         {
-            IImageInfo imageInfo = Image.Identify(stream);
+            ImageInfo imageInfo = Image.Identify(stream);
             _ = stream.Seek(0, SeekOrigin.Begin);
             image = imageInfo.PixelType.BitsPerPixel switch
             {
@@ -122,7 +127,8 @@ namespace BiomSharp.ImageSharp.Imaging
                 $"Failed to create raw image");
         }
 
-        public override void Write(Stream stream) => image?.Save(stream, encoder);
+        public override void Write(Stream stream) =>
+            image?.Save(stream, encoder ?? throw new InvalidOperationException("Encoder is null"));
 
         public override void Write<TParms>(Stream stream, TParms? _) where TParms : class
             => Write(stream);
