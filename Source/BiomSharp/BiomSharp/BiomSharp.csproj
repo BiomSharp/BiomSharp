@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <InternalsVisibleTo Include="BiomSharp.Imaging.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="Biometrics\**" />
     <EmbeddedResource Remove="Biometrics\**" />
     <None Remove="Biometrics\**" />

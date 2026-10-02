@@ -49,9 +49,9 @@ namespace BiomSharp.Imaging.Wsq
         int len2,
         int pitch,
         int stride,
-        float[] hi,
+        IReadOnlyList<float> hi,
         int hsz,
-        float[] lo,
+        IReadOnlyList<float> lo,
         int lsz,
         int inv)
         {
@@ -65,7 +65,6 @@ namespace BiomSharp.Imaging.Wsq
             int hlen, llen;
             int nstr, pstr;
             int tap;
-            int fi_ev;
             int olle, ohle, olre, ohre;
             int lle, lle2, lre, lre2;
             int hle, hle2, hre, hre2;
@@ -79,7 +78,7 @@ namespace BiomSharp.Imaging.Wsq
             float ssfac, osfac, sfac;
 
             da_ev = len2 % 2;
-            fi_ev = lsz % 2;
+            bool negateHighPassCoefficients = lsz % 2 == 0;
             pstr = stride;
             nstr = -pstr;
             if (da_ev != 0)
@@ -93,7 +92,7 @@ namespace BiomSharp.Imaging.Wsq
                 hlen = llen;
             }
 
-            if (fi_ev != 0)
+            if (!negateHighPassCoefficients)
             {
                 asym = 0;
                 ssfac = 1F;
@@ -150,10 +149,6 @@ namespace BiomSharp.Imaging.Wsq
                 {
                     hoc = 0;
                     ohle = 0;
-                }
-                for (i = 0; i < hsz; i++)
-                {
-                    hi[i] = -hi[i];
                 }
             }
 
@@ -298,7 +293,8 @@ namespace BiomSharp.Imaging.Wsq
                                     }
                                 }
                             }
-                            newdata[himg] += olddata[hpx] * hi[i] * sfac;
+                            float highPassCoefficient = negateHighPassCoefficients ? -hi[i] : hi[i];
+                            newdata[himg] += olddata[hpx] * highPassCoefficient * sfac;
                             hpx += hpxstr;
                         }
                         himg += stride;
@@ -460,18 +456,11 @@ namespace BiomSharp.Imaging.Wsq
                                 }
                             }
                         }
-                        newdata[himg] += olddata[hpx] * hi[i] * sfac;
+                        float highPassCoefficient = negateHighPassCoefficients ? -hi[i] : hi[i];
+                        newdata[himg] += olddata[hpx] * highPassCoefficient * sfac;
                         hpx += hpxstr;
                     }
                     himg += stride;
-                }
-            }
-
-            if (fi_ev == 0)
-            {
-                for (i = 0; i < hsz; i++)
-                {
-                    hi[i] = -hi[i];
                 }
             }
         }
@@ -512,14 +501,13 @@ namespace BiomSharp.Imaging.Wsq
             int len2,
             int pitch,
             int stride,
-            float[] hiflt,
-            float[] loflt,
+            IReadOnlyList<float> hiflt,
+            IReadOnlyList<float> loflt,
             int inv)
         {
             int lopass_idx, hipass_idx;
             int p0_idx, p1_idx;
             int da_ev;
-            int fi_ev;
             int loc, hoc, nstr, pstr;
             int llen, hlen;
             int lpxstr, lspxstr;
@@ -534,12 +522,12 @@ namespace BiomSharp.Imaging.Wsq
             int hre, hre2;
 
             da_ev = len2 % 2;
-            fi_ev = loflt.Length % 2;
+            bool negateHighPassCoefficients = loflt.Count % 2 == 0;
 
-            if (fi_ev != 0)
+            if (!negateHighPassCoefficients)
             {
-                loc = (loflt.Length - 1) / 2;
-                hoc = ((hiflt.Length - 1) / 2) - 1;
+                loc = (loflt.Count - 1) / 2;
+                hoc = ((hiflt.Count - 1) / 2) - 1;
                 olle = 0;
                 ohle = 0;
                 olre = 0;
@@ -547,8 +535,8 @@ namespace BiomSharp.Imaging.Wsq
             }
             else
             {
-                loc = (loflt.Length / 2) - 2;
-                hoc = (hiflt.Length / 2) - 2;
+                loc = (loflt.Count / 2) - 2;
+                hoc = (hiflt.Count / 2) - 2;
                 olle = 1;
                 ohle = 1;
                 olre = 1;
@@ -563,11 +551,6 @@ namespace BiomSharp.Imaging.Wsq
                 {
                     hoc = 0;
                     ohle = 0;
-                }
-
-                for (int i = 0; i < hiflt.Length; i++)
-                {
-                    hiflt[i] = -hiflt[i];
                 }
             }
 
@@ -616,7 +599,7 @@ namespace BiomSharp.Imaging.Wsq
                     lle = lle2;
                     lre = lre2;
                     newdata[lopass_idx] = olddata[lpxIndex] * loflt[0];
-                    for (int i = 1; i < loflt.Length; i++)
+                    for (int i = 1; i < loflt.Count; i++)
                     {
                         if (lpxIndex == p0_idx)
                         {
@@ -651,8 +634,9 @@ namespace BiomSharp.Imaging.Wsq
                     hpxIndex = hspxIndex;
                     hle = hle2;
                     hre = hre2;
-                    newdata[hipass_idx] = olddata[hpxIndex] * hiflt[0];
-                    for (int i = 1; i < hiflt.Length; i++)
+                    float highPassCoefficient = negateHighPassCoefficients ? -hiflt[0] : hiflt[0];
+                    newdata[hipass_idx] = olddata[hpxIndex] * highPassCoefficient;
+                    for (int i = 1; i < hiflt.Count; i++)
                     {
                         if (hpxIndex == p0_idx)
                         {
@@ -679,7 +663,8 @@ namespace BiomSharp.Imaging.Wsq
                             }
                         }
                         hpxIndex += hpxstr;
-                        newdata[hipass_idx] += olddata[hpxIndex] * hiflt[i];
+                        highPassCoefficient = negateHighPassCoefficients ? -hiflt[i] : hiflt[i];
+                        newdata[hipass_idx] += olddata[hpxIndex] * highPassCoefficient;
                     }
                     hipass_idx += stride;
 
@@ -720,7 +705,7 @@ namespace BiomSharp.Imaging.Wsq
                     lle = lle2;
                     lre = lre2;
                     newdata[lopass_idx] = olddata[lpxIndex] * loflt[0];
-                    for (int i = 1; i < loflt.Length; i++)
+                    for (int i = 1; i < loflt.Count; i++)
                     {
                         if (lpxIndex == p0_idx)
                         {
@@ -750,13 +735,6 @@ namespace BiomSharp.Imaging.Wsq
                         newdata[lopass_idx] += olddata[lpxIndex] * loflt[i];
                     }
                     //lopass_idx += stride;
-                }
-            }
-            if (fi_ev == 0)
-            {
-                for (int i = 0; i < hiflt.Length; i++)
-                {
-                    hiflt[i] = -hiflt[i];
                 }
             }
         }
